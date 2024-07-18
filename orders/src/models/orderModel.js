@@ -1,19 +1,25 @@
 const mongoose = require('mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
 const orderSchema = new mongoose.Schema({
-  productId: String,
-  customerId: String,
+  productIds: [{
+    type: String,
+    ref: 'Product',
+    required: true
+  }],
+  customerId: {
+    type: String,
+    ref: 'Customer',
+    required: true
+  },
   quantity: Number,
   totalPrice: Number,
-  status: {
-    type: String,
-    enum: ['Pending', 'Completed', 'Cancelled'],
-    default: 'Pending'
-  },
-  orderDate: {
+  createdAt: {
     type: Date,
     default: Date.now
   }
 });
+
+orderSchema.plugin(AutoIncrement, { inc_field: 'orderId' });
 
 module.exports = mongoose.model('Order', orderSchema);
