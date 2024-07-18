@@ -11,6 +11,4 @@ const customerSchema = new mongoose.Schema({
   }
 });
 
-customerSchema.plugin(AutoIncrement, { inc_field: 'customerId' });
-
 module.exports = mongoose.model('Customer', customerSchema);

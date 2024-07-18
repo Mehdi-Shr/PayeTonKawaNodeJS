@@ -20,6 +20,4 @@ const orderSchema = new mongoose.Schema({
   }
 });
 
-orderSchema.plugin(AutoIncrement, { inc_field: 'orderId' });
-
 module.exports = mongoose.model('Order', orderSchema);
