@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const customerRoutes = require('./routes/customerRoutes');
+const connectRabbitMQ = require('./config/rabbitmq');
 
 const app = express();
 
@@ -19,7 +20,13 @@ mongoose.connect(process.env.MONGO_URI, {
   console.error(err);
 });
 
-app.get('/',(res) => {
+connectRabbitMQ().then(channel => {
+  console.log('Connected to RabbitMQ');
+}).catch(err => {
+  console.error('Failed to connect to RabbitMQ:', err);
+});
+
+app.get('/',(req, res) => {
   res.send("Bienvenue sur le micro-service Customers")
 })
 
