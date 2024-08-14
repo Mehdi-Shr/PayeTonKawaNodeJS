@@ -1,0 +1,13 @@
+{
+    "name": "init-customer",
+    "version": "1.0.0",
+    "main": "init.js",
+    "scripts": {
+      "start": "node init.js"
+    },
+    "dependencies": {
+      "dotenv": "^10.0.0",
+      "mongodb": "^6.8.0"
+    }
+  }
+  
