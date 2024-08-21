@@ -33,6 +33,44 @@ const customerData = [
   },
 ];
 
+const orderData = [
+  {
+    customer_id: "1",
+    products: [
+      { product_id: "1", product_quantity: 2 }
+    ],
+    order_amount: 25.98
+  },
+  {
+    customer_id: "2",
+    products: [
+      { product_id: "2", product_quantity: 1 }
+    ],
+    order_amount: 199.99
+  },
+  {
+    customer_id: "3",
+    products: [
+      { product_id: "3", product_quantity: 1 }
+    ],
+    order_amount: 49.99
+  },
+  {
+    customer_id: "4",
+    products: [
+      { product_id: "4", product_quantity: 4 }
+    ],
+    order_amount: 31.96
+  },
+  {
+    customer_id: "1",
+    products: [
+      { product_id: "2", product_quantity: 1 }
+    ],
+    order_amount: 199.99
+  }
+];
+
 const productData = [
   {
     product_name: "Coffee Beans",
@@ -61,44 +99,6 @@ const productData = [
     product_price: 7.99,
     product_stock: 200,
     product_category: "Tableware",
-  },
-];
-
-const orderData = [
-  {
-    customer_id: 1,
-    product_id: 1,
-    order_date: "2024-06-01",
-    product_quantity: 2,
-    total_amount: 25.98,
-  },
-  {
-    customer_id: 2,
-    product_id: 2,
-    order_date: "2024-06-02",
-    product_quantity: 1,
-    total_amount: 199.99,
-  },
-  {
-    customer_id: 3,
-    product_id: 3,
-    order_date: "2024-06-03",
-    product_quantity: 1,
-    total_amount: 49.99,
-  },
-  {
-    customer_id: 4,
-    product_id: 4,
-    order_date: "2024-06-04",
-    product_quantity: 4,
-    total_amount: 31.96,
-  },
-  {
-    customer_id: 1,
-    product_id: 2,
-    order_date: "2024-06-05",
-    product_quantity: 1,
-    total_amount: 199.99,
   },
 ];
 
