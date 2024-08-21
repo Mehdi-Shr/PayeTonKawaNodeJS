@@ -1,5 +1,5 @@
 {
-    "name": "init-order",
+    "name": "customer-init",
     "version": "1.0.0",
     "main": "init.js",
     "scripts": {

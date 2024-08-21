@@ -1,5 +1,5 @@
 {
-    "name": "init-product",
+    "name": "order-init",
     "version": "1.0.0",
     "main": "init.js",
     "scripts": {
